@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/png" />
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <title>LMS |NSBM</title>
+</head>
+
+<body>
+    <div class="topNav">
+        <div class="container">
+            <ul class="topLogin">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav>
+        <div class="container">
+            <div class="header">
+                <img src="./imgs/nsbm-green-uni-logo.png" alt="nsbm logo">
+            </div>
+
+            <label for="show-menu" class="show-menu">Show Menu</label>
+            <input type="checkbox" id="show-menu" role="button">
+
+
+            <ul class="navbar" id="menu">
+                <li class="current"><a href="#">Home</a></li>
+                <li><a href="#courses">Courses</a>
+                    <ul class="hiddenNav">
+                        <li><a href="courses.html">School of Computing</a></li>
+                        <li><a href="courses.html">School of Business</a></li>
+                        <li><a href="courses.html">School of Engineering</a></li>
+                    </ul>
+                </li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About NSBM</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <section id="landing">
+            <div class="container">
+                <div class="loginBox wow bounceInRight" data-wow-delay="2s">
+                    <img src="./imgs/user2.png" id="login-img">
+                    <form>
+                        <h3>Email</h3>
+                        <div class="form-input">
+                            <input type="email" name="email" placeholder="Enter email">
+                        </div>
+                        <h3>Password</h3>
+                        <div class="form-input">
+                            <input type="password" name="password" placeholder="Enter password ">
+                        </div>
+                        <button type="submit" name="submit">Login</button>
+                    </form>
+                    <a href="forget.html"> Forget Password ? </a>
+                    <BR>
+                    <a href="forget.html"> Don't have a account!<br> REGISTER NOW </a>
+                </div>
+            </div>
+        </section>
+        <section id="sponsers">
+            <div class="container">
+                <h1 class="wow fadeInUp" data-wow-delay="0.4">Partner Universities</h1>
+                <p class="wow fadeInUp" data-wow-delay="1.0s">Affiliated to the Top Ranked Universities</p>
+                <div class="row">
+                    <div class=" col-sm-3">
+                        <li><img src="./imgs/logos/nEmblem.jpg" alt=""></li>
+                    </div>
+                    <div class=" col-sm-3">
+                        <li><img src="./imgs/logos/ugc.jpg" alt=""></li>
+                    </div>
+                    <div class=" col-sm-3">
+                        <li><img src="./imgs/logos/acu.jpg" alt=""></li>
+                    </div>
+                    <div class=" col-sm-3">
+                        <li><img src="./imgs/logos/apqn.jpg" alt=""></li>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-sm-3">
+                        <li><img src="./imgs/logos/aacsb.jpg" alt=""></li>
+                    </div>
+                    <div class=" col-sm-3">
+                        <li><img src="./imgs/logos/nibm.jpg" alt=""></li>
+                    </div>
+                    <div class=" col-sm-3">
+                        <li><img src="./imgs/logos/limkokwing.jpg" alt=""></li>
+                    </div>
+                    <div class=" col-sm-3">
+                        <li><img src="./imgs/logos/ucd.jpg" alt=""></li>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6  col-sm-6">
+                        <li><img src="./imgs/logos/plymouth.jpg" alt=""></li>
+                    </div>
+                    <div class="col-md-6  col-sm-6">
+                        <li><img src="./imgs/logos/victoria.jpg" alt=""></li>
+                    </div>
+                </div>
+        </section>
+        <section id="courses">
+            <div class="container">
+                <h1 class="wow fadeInUp" data-wow-delay="0.4">Courses</h1>
+                <p class="wow fadeInUp" data-wow-delay="1.0s">Imagine Your Future With No Limits!</p>
+                <div class="box col-sm-4">
+                    <img src="./imgs/pexels-photo-251225.jpeg" alt="computing">
+                    <div class="text-box">
+                        <h2>School of Computing</h2>
+                        <p><button>View courses</button></p>
+                    </div>
+                </div>
+                <div class="box col-sm-4">
+                    <img src="./imgs/pexels-photo-buisniness.jpg" alt="manegment">
+                    <div class="text-box">
+                        <h2>School of Business</h2>
+                        <p><button>View courses</button></p>
+                    </div>
+                </div>
+                <div class="box col-sm-4">
+                    <img src="./imgs/pexels-photo-256381.jpeg" alt="engineering">
+                    <div class="text-box">
+                        <h2>School of Engineering</h2>
+                        <p><button>Coming Soon</button></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="events">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="./imgs/pexels-photo78978.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./imgs/pexels-photo-196652.jpeg" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./imgs/pexels-photo-262524.jpeg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="container">
+                    <h1>Events</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button>View Events</button>
+                </div>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h1>About NSBM</h1>
+                <div class="box">
+                    <p>NSBM Green University Town is the first ever green university in South Asia and sets an example for the whole South Asia by paving the way for environmental sustainability. The university is open for both national and international student community and it has turned a new chapter in Sri Lankan higher education. NSBM Green University Town is established under the Ministry of Skills Development and Vocational Training and it is renowned for its world-class academic offerings. This state-of-the-art university offers nationally and internationally recognized, UGC approved degree programmes and foreign degree programmes in three faculties: Management, Computing and Engineering. The university is spread over an area of 26 acres and the massive university complex was built with the intention of providing an opportunity for both national and international students to have a fully-fledged education in Sri Lanka. Currently around 9000 students are studying at the university and the highly qualified local and foreign lecturers who teach at the university are committed to prepare these undergraduates to face any challenge the world has to offer. The university’s commitment to excellence in education extends beyond course delivery since the university has created mutually beneficial relationships with the industry to provide students with opportunities to get exposure to the real- world work places. Inspired by the vision of making Sri Lanka the best educational hub in Asia, NSBM Green University Town is dedicated to gift the future leaders to the world with its fully fledged university..
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container head">
+                <h1>NSBM Green Univeristy</h1>
+                <p>We are looking forward to hearing from you soon...</p>
+                <p>inquiries@nsbm.lk</p>
+                <p>011 544 5000</p>
+            
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <input type="text" placeholder="Name*" name="name" class="col-sm-4">
+                        <input type="email" placeholder="Email*" name="email" class="col-sm-4">
+                        <input type="text" placeholder="Phone Number" name="tele" class="col-sm-4">
+                    </div>
+                    <div class="row">
+                        <textarea name="msg" id="" cols="30" rows="10" placeholder="Write your message here.."></textarea>
+                    </div>
+                    <div class="row">
+                        <button type="submit">SEND</button>
+                    </div>
+
+                </form>
+            </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7922.299566842686!2d79.883155!3d6.87265!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xddb466719c0595db!2sNSBM+Green+University!5e0!3m2!1sen!2sus!4v1497287775182" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+        </section>
+        <footer>
+            <p>NSBM LMS , Copyright &copy; 2017</p>
+        </footer>
+
+     
+        </div>
+
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+
+        </script>
+        <script src="./js/main.js"></script>
+
+
+</body>
+
+</html>

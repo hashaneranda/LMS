@@ -1,0 +1,1024 @@
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+/*
+.topImg{
+    background: url("../imgs/best_lms_sell_courses.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+min-height: 1000px;
+}
+#topLogin{
+    margin:5px 20px 0 0;
+    padding: 0;
+    
+}
+#topLogin .navbar-nav > li > a{
+    height: 5px;
+    padding:10px;;
+}
+
+#headerlogo{
+    margin-top: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: #fff;
+}
+
+*/
+
+
+/*
+#preloader-2 {
+    position: relative;
+}
+
+#preloader-2 span {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 999px;
+}
+
+#preloader-2 span:nth-child(1) {
+    animation: cross-1 1.5s infinite linear;
+}
+
+#preloader-2 span:nth-child(2) {
+    animation: cross-2 1.5s infinite linear;
+}
+
+@keyframes cross-1 {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(80px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes cross-2 {
+    0% {
+        transform: translateX(80px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(0px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(80px);
+        opacity: 1;
+    }
+}
+*/
+
+
+/*----global -----*/
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    z-index: 1;
+}
+
+.row {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    display: inline;
+}
+
+.col-sm-3 {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.col-sm-4 {
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+.col-sm-6 {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .col-sm-3,
+    .col-sm-6 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .col-sm-3,
+    .col-sm-6,
+    .col-sm-4 {
+        width: 100%;
+    }
+}
+
+
+/*-----TOP NAV BAR------*/
+
+.topNav {
+    background-color: #1C2021;
+    color: #ECF0F1;
+    height: 30px;
+    overflow: hidden;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    width: 100%;
+    z-index: 30;
+}
+
+.topNav .topLogin {
+    float: right;
+}
+
+.topNav .topLogin li {
+    display: inline-block;
+    margin: 5px 20px 0 0;
+}
+
+.topNav .topLogin li a {
+    color: #FFFFF7;
+}
+
+.topNav .topLogin li a:hover {
+    color: #3D8EB9;
+    font-weight: bold;
+    border: 1px solid #3D8EB9;
+    border-radius: 4px;
+    padding: 0 4px 0 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .topNav .topLogin {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/*---------- NAV BAR ------------*/
+
+
+/*
+nav{
+    display: inline;
+}
+nav .navbar,
+nav .navImg
+nav .header{
+    float:left;
+    display: inline;
+}
+*/
+/*Style 'show menu' label button and hide it by default*/
+nav .show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width:10%;
+    float: right;
+	text-decoration: none;
+	color: #fff;
+	background: #19c589;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+nav input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+nav input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+nav {
+    background-color: #FFFCE6;
+    color: #00587A;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #19c589 4px solid;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    width: 100%;
+    top: 30px;
+    overflow: visible;
+    z-index: 30;
+}
+
+nav .header {
+    height: 100px;
+    float: left;
+    width: 15%;
+}
+
+nav .navbar {
+    float: right;
+    padding-top: 15px;
+}
+
+nav .navbar .current a {
+    background: #27AE60;
+    color: #F0F1F5;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/*Create a horizontal list with spacing*/
+
+nav .navbar li {
+	text-align: right;
+	padding-right: 10px;
+	display: inline-block;
+}
+
+nav .navbar li a {
+    display: block;
+    text-decoration: none;
+    min-width: 140px;
+    color: #00587A;
+    line-height: 50px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+
+/*Hover state for top level links*/
+
+nav .navbar li:hover a {
+    background: #55C34D;
+    color: #F0F1F5;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/*Style for dropdown links*/
+
+nav .navbar li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+/*Hover state for dropdown links*/
+
+nav .navbar li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+
+
+/* hide dropdown menues */
+
+nav .navbar li ul {
+    display: none;
+}
+
+nav .navbar li ul li {
+    display: block;
+    float: none;
+}
+
+
+/*Prevent text wrapping*/
+
+nav .navbar li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+
+/*Display the dropdown on hover*/
+
+nav .navbar li a:hover+ .hiddenNav,
+.hiddenNav:hover {
+    display: block;
+}
+.hiddenNav{
+    position: absolute;
+}
+@media screen and (max-width: 1115px) {
+    nav .header {
+        width: 100%;
+        text-align: center;
+        height: 70px;
+    }
+    nav .navbar {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    nav .navbar li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /*Make dropdown links appear inline*/
+    nav .header {
+        width: 70px;
+        height: auto;
+        margin-left: -15px;
+    }
+    nav ul {
+        position: static;
+		display: none;
+    }
+    nav .navbar li ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    nav li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    nav ul li,
+    nav li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    nav .show-menu {
+        display: block;
+    }
+}
+
+
+/*---home----LANDING ------*/
+
+#landing {
+    margin: 0;
+    padding: 0;
+    background-image: url("../imgs/pexels-photo-12064.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 360px) {
+    #landing {
+        min-height: 640px;
+    }
+}
+
+
+/*-------------LOGIN BOX---------------*/
+
+#login-img {
+    margin-top: -60px;
+    margin-bottom: 30px;
+    height: 160px;
+    width: 160px;
+}
+
+.loginBox {
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgba(44, 130, 201, 1.0);
+    border-radius: 4px;
+    box-shadow: 0 0 6px #2c3e50;
+    margin-top: 300px;
+    margin-bottom: 100px;
+    overflow: visible;
+    float: right;
+}
+
+.loginBox input {
+    width: 70%;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #00587A;
+}
+
+.loginBox h3 {
+    margin: 0 0 15px 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 20px;
+    color: #112233;
+}
+
+.loginBox button {
+    width: 30%;
+    border: none;
+    background-color: #00587A;
+    color: #CDCBA6;
+    padding: 10px;
+    margin: 10px 0 40px 0;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.loginBox a {
+    text-decoration: none;
+    color: #E7E7DE;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .loginBox {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .loginBox {
+        width: 400px;
+        margin-top: 250px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .loginBox {
+        width: 300px;
+        margin-top: 200px;
+    }
+}
+
+
+/*------------SPONSERS---PARTNER UNIVERSITIES------------------*/
+
+#sponsers {
+    margin: 40px 0 40px 0;
+}
+
+#sponsers h1 {
+    text-align: center;
+    font-size: 55px;
+    font-family: cursive;
+    color: #55C34D;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#sponsers p {
+    text-align: center;
+    font-size: 17px;
+    font-family: monospace;
+    color: rgb(44, 130, 201);
+    margin-bottom: 60px;
+}
+
+#sponsers img {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+#sponsers li:hover img {
+    opacity: 1.0;
+}
+
+@media screen and (max-width: 768px) {
+    #sponsers h1 {
+        font-size: 30px;
+    }
+    #sponsers p {
+        font-size: 14px;
+    }
+    #sponsers img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #sponsers h1 {
+        font-size: 23px;
+    }
+    #sponsers p {
+        font-size: 12px;
+    }
+    #sponsers img {
+        width: auto;
+    }
+    #sponsers .col-sm-3,
+    #sponsers .col-sm-6 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #sponsers .col-sm-3,
+    #sponsers .col-sm-6 {
+        width: 100%;
+    }
+}
+
+
+/*--------------COURSES-----------------*/
+
+#courses {
+    background-image: url("../imgs/sky-clouds-garden-school.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#courses h1 {
+    text-align: center;
+    font-size: 55px;
+    font-family: cursive;
+    color: #1DABB8;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#courses p {
+    text-align: center;
+    font-size: 17px;
+    font-family: monospace;
+    color: #92F22A;
+    margin-bottom: 60px;
+}
+
+#courses .box {
+    margin: 20px;
+    background-color: #F0F1F5;
+    box-shadow: 1px 1px 1px #E7E7E7;
+    margin-bottom: 100px;
+}
+
+#courses .box .text-box {}
+
+#courses .box .text-box h2 {
+    font-size: 25px;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+#courses .box .text-box button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: #F0F1F5;
+    background-color: #55C34D;
+    text-align: center;
+    cursor: pointer;
+    width: 90%;
+    font-size: 18px;
+    margin: 0 10px 0 10px;
+}
+
+#courses .box .text-box button:hover {
+    opacity: 0.8;
+}
+
+#courses .box img {
+    width: 100%;
+    height: 300px;
+}
+@media screen and (max-width: 980px) {
+    #courses .box{
+        margin: 20px 10px 30px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #courses h1 {
+        font-size: 40px;
+    }
+    #courses p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #courses .box{
+        margin: 20px 0 20px 0;
+    }
+    #courses h1 {
+        font-size: 33px;
+    }
+    #courses p {
+        font-size: 14px;
+    }
+    #courses .box .text-box button {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #courses .box{
+        margin: 10px 0 15px 0;
+    }
+    #courses .box img {
+        height: 200px;
+    }
+    #courses .box .text-box button {
+        width: 80%;
+    }
+}
+
+
+/*-------------EVENTS-----------------*/
+
+#events{
+
+}
+#events .slideshow-container{
+    width:100%;
+    position: relative;
+     
+    height: auto;
+    background-size: cover;
+    margin:auto;
+
+}
+#events .container{
+    text-align: center;
+    margin: auto;
+    left: 10%;
+    border-radius: 3px;
+    top:20%;
+    position: absolute;
+    background-color: rgba(40, 40, 48,0.6);
+}
+#events .container h1{
+    font-size: 200px;
+    color: #FC575E;
+    font-weight: bold;
+    padding-bottom: 0;
+    margin: 0 0 0 0;
+    
+}
+#events .container p{
+    color:#53DF83;
+    font-size: 50px;
+}
+#events .container button{
+    background-color: #FF6766;
+    color:#F0F1F5;
+    font-size:30px;
+    border:none;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 20px;
+    cursor: pointer;
+    
+}
+#events .container button:hover{
+    background-color:rgba(255, 103, 102,0.6);
+}
+#events .myslides{
+    display: none;
+}
+/*next & prev buttons*/
+#events .prev,#events .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -20px;
+    padding: 20px;
+    color: #F0F1F5;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 600ms ease;
+    border-radius: 0 3px 3px 0;
+    z-index: 10;
+}
+/* Position the "next button" to the right */
+#events .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#events .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+#events .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+#events .dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 600ms ease;
+}
+
+#events .active,#events .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+#events .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.6s;
+  animation-name: fade;
+  animation-duration: 1.6s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+@media screen and (max-width: 980px) {
+    #events .container h1{
+        font-size:80px;
+    }
+    #events .container p{
+        font-size:30px;
+    }
+    #events .container button{
+        padding: 10px;
+        font-size:30px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    #events .container h1{
+        font-size:40px;
+    }
+    #events .container p{
+        font-size:18px;
+    }
+    #events .container button{
+        padding: 4px;
+        font-size:20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #courses .box{
+        margin: 10px 0 15px 0;
+    }
+    #courses .box img {
+        height: 200px;
+    }
+    #courses .box .text-box button {
+        width: 80%;
+    }
+}
+
+
+/*------------about us------------------*/
+
+#about{
+    background-color: #3D8EB9;
+    padding: 30px 0 30px 0;
+}
+#about .container h1{
+    font-size: 70px;
+    color: #55C34D;
+    text-align: center;
+}
+#about .container p{
+    font-size:20px;
+    max-width: 80%;
+    margin: auto;
+    color: #282830;
+    padding-bottom: 30px;
+    
+}
+#about .box{
+    background-color:#F0F1F5;
+    margin:30px;
+    padding: 10px 0 10px 0;
+    box-shadow: 5px 3px 2px #55C34D;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #about .container h1{
+        font-size:50px;
+    }
+    #about .container p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about .container h1{
+        font-size:35px;
+    }
+    #about .container p{
+        font-size: 13px;
+    }
+}
+
+
+/*-----------CONTACT US----------------------*/
+
+#contact{
+    background-image: url("../imgs/pexels-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#contact .head{
+    display: block;
+    background-color: rgba(240, 241, 245,0.8);
+    box-shadow: 5px 3px 2px #CF000F;
+    margin-bottom: 30px;
+    
+}
+#contact .head h1{
+    font-size: 60px;
+    color: #27AE60;
+    text-align: center;
+}
+#contact .head p{
+    text-align: center;
+    color: #3D8EB9;
+    font-size: 20px;
+}
+
+#contact .container form{
+    width:100%;
+    display: block;
+    
+}
+#contact .container form input[type="text"]{
+
+    margin: auto;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border:solid 1px #27AE60;
+    text-align: left;
+    
+}
+#contact .container form input[type="email"]{
+
+    margin: auto;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border:solid 1px #27AE60;
+    text-align: left;
+    
+}
+#contact .container form textarea{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    border:solid 1px #27AE60;
+    text-align: left;
+    padding: 15px;
+}
+#contact .container form button{
+    padding: 20px;
+    border: none;
+    text-align: center;
+    width: 100px;
+    height: auto;
+    background-color: #3D8EB9;
+    color:#F0F1F5;
+    font-size:20px;
+    border-radius: 8px;
+    margin: 20px;
+}
+#contact iframe{
+    width:100%;
+    height: 400px;
+}
+@media screen and (max-width: 768px) {
+    #contact .head h1{
+        font-size: 40px;
+        
+    }
+    #contact .head p{
+        font-size: 16px;
+    }
+    #contact .container form input[type="text"]{
+        padding: 7px;
+
+    }
+     #contact .container form input[type="email"]{
+        padding: 7px;
+
+    }
+    #contact .container form button{
+        padding: 8px;
+    }
+    #contact iframe{
+        height: 250px;
+    }
+}
+@media screen and (max-width: 480px) {
+    #contact .head h1{
+        font-size: 35px;
+        
+    }
+    #contact .head p{
+        font-size: 16px;
+    }
+    #contact .container form input[type="text"]{
+        padding: 5px;
+
+    }
+     #contact .container form input[type="email"]{
+        padding: 5px;
+
+    }
+    #contact .container form button{
+        padding: 4px;
+    }
+    #contact iframe{
+        height: 250px;
+    }
+}
+
+
+/*------------FOOTER----------------*/
+
+footer{
+  color:#282830;
+  background-color: #27AE60;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  width:100%;
+}
