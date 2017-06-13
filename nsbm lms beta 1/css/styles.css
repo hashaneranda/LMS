@@ -1,8 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css?family=Bubbler+One|Fredoka+One');
+
 body {
     font-size: 16px;
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Bubbler One', sans-serif;
 }
 
 
@@ -459,7 +463,6 @@ nav .navbar li a:hover+ .hiddenNav,
     margin: 0 0 15px 0;
     padding: 0;
     text-align: center;
-    font-family: 'Bree Serif', serif;
     font-size: 20px;
     color: #112233;
 }
@@ -479,8 +482,11 @@ nav .navbar li a:hover+ .hiddenNav,
     text-decoration: none;
     color: #E7E7DE;
     font-weight: bold;
-    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 15px;
+    text-align: center;
+}
+.loginBox a:hover{
+    color:#55C34D;
 }
 
 @media screen and (max-width: 768px) {
@@ -513,7 +519,7 @@ nav .navbar li a:hover+ .hiddenNav,
 #sponsers h1 {
     text-align: center;
     font-size: 55px;
-    font-family: cursive;
+    font-family: 'Fredoka One', cursive;
     color: #55C34D;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -522,7 +528,6 @@ nav .navbar li a:hover+ .hiddenNav,
 #sponsers p {
     text-align: center;
     font-size: 17px;
-    font-family: monospace;
     color: rgb(44, 130, 201);
     margin-bottom: 60px;
 }
@@ -586,7 +591,7 @@ nav .navbar li a:hover+ .hiddenNav,
 #courses h1 {
     text-align: center;
     font-size: 55px;
-    font-family: cursive;
+    font-family: 'Fredoka One', cursive;
     color: #1DABB8;
     font-weight: bold;
     margin-bottom: 0;
@@ -612,7 +617,7 @@ nav .navbar li a:hover+ .hiddenNav,
 
 #courses .box .text-box h2 {
     font-size: 25px;
-    font-family: sans-serif;
+    font-family: 'Fredoka One', cursive;
     padding: 20px;
 }
 
@@ -845,12 +850,13 @@ nav .navbar li a:hover+ .hiddenNav,
 /*------------about us------------------*/
 
 #about{
-    background-color: #3D8EB9;
+    background-color: #55C34D;
     padding: 30px 0 30px 0;
 }
+
 #about .container h1{
     font-size: 70px;
-    color: #55C34D;
+    color: #3D8EB9;
     text-align: center;
 }
 #about .container p{
@@ -865,7 +871,7 @@ nav .navbar li a:hover+ .hiddenNav,
     background-color:#F0F1F5;
     margin:30px;
     padding: 10px 0 10px 0;
-    box-shadow: 5px 3px 2px #55C34D;
+    box-shadow: 5px 3px 2px #3D8EB9;
     
 }
 
@@ -959,6 +965,10 @@ nav .navbar li a:hover+ .hiddenNav,
     font-size:20px;
     border-radius: 8px;
     margin: 20px;
+    cursor: pointer;
+}
+#contact .container form button:hover{
+    opacity: 0.8;
 }
 #contact iframe{
     width:100%;
