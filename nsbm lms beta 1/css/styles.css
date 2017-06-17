@@ -179,6 +179,7 @@ li {
     /* Set the navbar to fixed position */
     width: 100%;
     z-index: 30;
+    margin-top: 0;
 }
 
 .topNav .topLogin {
@@ -476,6 +477,11 @@ nav .navbar li a:hover+ .hiddenNav,
     margin: 10px 0 40px 0;
     font-size: 20px;
     border-radius: 4px;
+    cursor: pointer;
+    
+}
+.loginBox button:hover{
+    opacity: 0.8;
 }
 
 .loginBox a {
@@ -871,8 +877,12 @@ nav .navbar li a:hover+ .hiddenNav,
     background-color:#F0F1F5;
     margin:30px;
     padding: 10px 0 10px 0;
-    box-shadow: 5px 3px 2px #3D8EB9;
+    border: 2px solid #3D8EB9;
+    cursor: pointer;
     
+}
+#about .box:hover{
+    box-shadow:5px 3px 3px #3D8EB9;
 }
 
 @media screen and (max-width: 768px) {
@@ -1031,4 +1041,119 @@ footer{
   padding: 10px;
   text-align: center;
   width:100%;
+    bottom: 0;        
+}
+
+
+
+/*------------------------------------------******* COURSES PAGES ********--------------------------------------------------------------------*/
+
+
+.faculty{
+    border: 2px solid #27AE60;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    margin: auto;
+    margin-bottom: 170px;
+}
+.faculty:hover{
+    box-shadow: 5px 5px 5px #27AE60;
+}
+
+.faculty h1{
+    text-align: center;
+    font-size:80px;
+}
+
+.faculty input {
+  display: none;
+  visibility: hidden;
+}
+.faculty label {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+  color: #666;
+}
+.faculty label:hover {
+  color: #000;
+}
+.faculty label::before {
+  font-family: Consolas, monaco, monospace;
+  font-weight: bold;
+  font-size: 15px;
+  content: "+";
+  vertical-align: text-top;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
+}
+.faculty #expand0,#expand1,#expand2,#expand3,#expand4 {
+  display: none;
+  overflow: hidden;
+  transition: height 0.5s;
+  color: #000;
+    text-align: center;
+    font-size: 20px;
+}
+.faculty section {
+  padding: 0 20px;
+}
+/* --yr 0 -*/
+.faculty #toggle0:checked ~ #expand0 {
+  display: block;
+}
+.faculty #toggle0:checked ~ #yr0::before {
+  content: "-";
+}
+/* --yr 1 -*/
+.faculty #toggle1:checked ~ #expand1 {
+  display: block;
+}
+.faculty #toggle1:checked ~ #yr1::before {
+  content: "-";
+}
+/* --yr 2 -*/
+.faculty #toggle2:checked ~ #expand2 {
+  display: block;
+}
+.faculty #toggle2:checked ~ #yr2::before {
+  content: "-";
+}
+/* --yr 3 -*/
+.faculty #toggle3:checked ~ #expand3 {
+  display: block;
+}
+.faculty #toggle3:checked ~ #yr3::before {
+  content: "-";
+}
+/* --yr 4 -*/
+.faculty #toggle4:checked ~ #expand4 {
+  display: block;
+}
+.faculty #toggle4:checked ~ #yr4::before {
+  content: "-";
+}
+
+@media screen and (max-width: 480px) {
+    .faculty{
+        padding-top: 160px;
+        margin-bottom: 120px;
+    }
+    .faculty h1{
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .faculty{
+        padding-top: 150px;
+        margin-bottom: 120px;
+    }
+    .faculty h1{
+        font-size: 45px;
+    }
 }
