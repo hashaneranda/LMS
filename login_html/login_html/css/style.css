@@ -1,0 +1,116 @@
+body {
+    background: #eee;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.h2, h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login-wrapper {
+    margin: 0 auto;
+    max-width: 360px;
+    background-color:#5F9F9F;
+    padding: 30px 25px;
+    margin-top: 40px;
+    -webkit-box-shadow: 0px 5px 26px 0px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 5px 26px 0px rgba(0, 0, 0, 0.21);
+    box-shadow: 0px 5px 26px 0px rgba(0, 0, 0, 0.21);
+}
+.login-wrapper button {
+    padding: 10px 70px;
+}
+.logo {
+    max-width: 250px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.btn-blue {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btn-blue:hover {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+}
+
+.btn-blue:active:focus, .btn-blue:active:hover {
+    color: #fff;
+    background-color: #269abc;
+    border-color: #1b6d85;
+}
