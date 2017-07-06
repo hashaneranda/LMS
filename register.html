@@ -2,112 +2,9 @@
 <html>
 <head>
     
-    <title> LMS | NSBM </title>
+    <title> REGISTER | NSBM </title>
     
-    
-    
-    
-    <style>
-        
-        div.container {
-                        width: 100%;
-                        height: auto;
-                        
-                      }
-        
-        header{
-                padding: 1px;
-                color: black;
-                clear: left;
-                font-family:serif;
-                font-size: 20px;
-                text-shadow: 3px 3px 3px darkblue;
-              }
-
-
-        nav {
-            float: left;
-            font-family:sans-serif;
-            max-width: 50%;
-            margin: 0;
-            color:cornflowerblue;
-            padding: 1em;
-            font-size: 13px;
-            }
-        
-        article {
-                
-                font-family:sans-serif;
-                color:cornflowerblue;
-                margin-left: 170px;
-                padding: 1em;
-                overflow: hidden;
-                text-align: center;
-                font-weight: bolder;
-                
-                }
-        
-        #wrapper {
-            
-            width: auto;
-            margin: auto;
-            padding: inherit;
-            background: #EFFFE0;
-            
-        }
-        
-        .form {
-                text-align: center;
-                color: blue;
-                font-size: 13px;
-               }
-        
-        .textInput,.select{
-            
-            border: 1px solid blue;
-            
-        }
-        
-        .button {
-                background-color:#008CBA;
-                border: none;
-                color: white;
-                padding: 5px 25px;
-                text-align: center;
-                display: inline-block;
-                font-size: 16px;
-                font-weight: bolder;
-                margin: 15px 60px;
-                transition-duration: 0.4s;
-                cursor: pointer;
-                border-radius: 8px;
-                }
-        
-        .button1 {
-                background-color: white;
-                color: black;
-                border: 2px solid #008CBA;
-                 }
-        
-        .button1:hover {
-                        background-color:#008CBA ;
-                        color: white;
-                       }
-        
-        footer{
-                padding: 1em;
-                color: white;
-                background-color: #33ff33;
-                clear: left;
-                text-align: center;
-              } 
-        
-        .val_error{
-                    color: #FF1F1F;
-                  }
-        
-    </style>
-    
+    <link rel="stylesheet" href="register.css">
 </head>
     
 <body>
@@ -122,7 +19,7 @@
             
         </header>
         
-        <nav id="layout-table">
+        <div1 id="layout-table">
             
             <h1 style="font: bolder wider ; font-family:cooper-black; color:darkblue; text-align:center; ">IS THIS YOUR FIRST TIME HERE?</h1>
 
@@ -153,11 +50,11 @@
                 8. If you are prompted for an "enrolment key" - use the one that your teacher has given you. This will "enrol" you in the course.<br>
                 <br>
                 9. You can now access the full course. From now on you will only need to enter your personal username and password (in the form on this page) to log in and access any course you have enrolled in.
-        </nav>
+        </div1>
         
-        <article>
+        <div2>
             
-            <div id="wrapper">
+            <div>
             <form class="form" name="reg_form" onsubmit="return Validate()" method="POST" >
                 
                 <br>
@@ -166,13 +63,16 @@
                     
                 </p>
         
-            User Name &emsp;&emsp;&emsp;<input type="text" name="uname" class="textInput" placeholder="User Name" size="30"><br><br>
+            User Name &nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" name="uname" class="textInput" placeholder="User Name" size="30" required><br><br>
                 
-            <div id="name_error" class="val_error"></div>
+            
                 
-            Password  &nbsp;&nbsp;&emsp;&emsp;&emsp;<input type="password" name="password" class="textInput"placeholder="Password" size="30"><br> <br>
+            Password  &nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="password" name="password" class="textInput"placeholder="Password" size="30" required><br> <br>
                 
-            <div id="password_error" class="val_error"></div>
+                
+            Confirm Password  &emsp;&emsp;&emsp;<input type="password" name="password" class="textInput"placeholder="Password" size="30" required><br> <br>
+                
+            
                 
             <p style="font: bolder wider ; font-family:cooper-black;font-size:25px; color:darkblue; text-align:center; ">
                 
@@ -180,23 +80,23 @@
                 
             </p>
                 
-            E-mail &nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="email" class="textInput" name="email" placeholder="E-mail" size="30"><br><br>
+            E-mail &emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="email" class="textInput" name="email" placeholder="E-mail" size="30" required><br><br>
                 
-            <div id="email_error" class="val_error"></div>
             
-            Full Name &nbsp;&nbsp;&emsp;&emsp;&emsp;<input type="text" class="textInput" name="fullname" placeholder="Name with Initials" size="30"><br><br>
+            
+            Full Name &emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;<input type="text" class="textInput" name="fullname" placeholder="Name with Initials" size="30" required><br><br>
                 
-            <div id="fname_error" class="val_error"></div>
+            
         
-            Index Number &nbsp;&nbsp;&emsp;<input type="text" name="index" class="textInput" placeholder="Index Number : bsc-ply-com-16.2-000" size="30"><br><br>
+            Index Number &emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;<input type="text" name="index" class="textInput" placeholder="Index Number : bsc-ply-com-16.2-000" size="30" required><br><br>
                 
-            <div id="index_error" class="val_error"></div>
+            
                 
-            Town &nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" class="textInput" name="town" placeholder="City/Town" size="30"><br><br>
+            Town &emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" class="textInput" name="town" placeholder="City/Town" size="30" required><br><br>
                 
-            <div id="town_error" class="val_error"></div>
+            
                 
-     Country &emsp;&emsp;&emsp;&emsp;&emsp;<select name="country"class="select">
+     Country &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<select name="country"class="select" required>
         <option value="Afghanistan">Afghanistan</option>
         <option value="Albania">Albania</option>
         <option value="Algeria">Algeria</option>
@@ -444,13 +344,13 @@
     
     <button class="button button1" type="submit" value="Submit" onClick="validateform();">  Create  </button>
                 
-    <button class="button button1" type="cancel" value="Cancel" > Cancel   </button>
+    <button class="button button1" type="reset" value="reset" > Cancel   </button>
 
     </form>
     
     </div>
             
-    </article>
+    </div2>
         
     <footer>
         
