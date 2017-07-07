@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css?family=Bubbler+One|Fredoka+One');
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Bubbler One', sans-serif;
+}
+
+
+
+/*----global -----*/
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+   color: #000;
+    text-decoration: none;
+}
+
+a:active {
+   color: #000;
+    text-decoration: none;
+}
+
+.main {
+    z-index: 1;
+}
+
+.row {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    display: inline;
+}
+
+.col-sm-3 {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.col-sm-4 {
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+.col-sm-6 {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .col-sm-3,
+    .col-sm-6 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .col-sm-3,
+    .col-sm-6,
+    .col-sm-4 {
+        width: 100%;
+    }
+}
+
+/*-----TOP NAV BAR------*/
+
+.topNav {
+    background-color: #1C2021;
+    color: #ECF0F1;
+    height: 30px;
+    overflow: hidden;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    width: 100%;
+    z-index: 30;
+    margin-top: 0;
+}
+
+.topNav .topLogin {
+    float: right;
+}
+
+.topNav .topLogin li {
+    display: inline-block;
+    margin: 5px 20px 0 0;
+}
+
+.topNav .topLogin li a {
+    color: #FFFFF7;
+}
+
+.topNav .topLogin li a:hover {
+    color: #3D8EB9;
+    font-weight: bold;
+    border: 1px solid #3D8EB9;
+    border-radius: 4px;
+    padding: 0 4px 0 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .topNav .topLogin {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/*---------- NAV BAR ------------*/
+
+
+/*
+nav{
+    display: inline;
+}
+nav .navbar,
+nav .navImg
+nav .header{
+    float:left;
+    display: inline;
+}
+*/
+/*Style 'show menu' label button and hide it by default*/
+nav .show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width:10%;
+    float: right;
+	text-decoration: none;
+	color: #fff;
+	background: #19c589;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+nav input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+nav input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+nav {
+    background-color: #FFFFF7;
+    color: #00587A;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #19c589 4px solid;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    width: 100%;
+    top: 30px;
+    overflow: visible;
+    z-index: 30;
+}
+
+nav .header {
+    height: 100px;
+    float: left;
+    width: 15%;
+}
+
+nav .navbar {
+    float: right;
+    padding-top: 15px;
+}
+
+nav .navbar .current {
+    background: #27AE60;
+    color: #F0F1F5;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/*Create a horizontal list with spacing*/
+
+nav .navbar li {
+	text-align: right;
+	padding-right: 10px;
+	display: inline-block;
+}
+
+nav .navbar li a {
+    display: block;
+    text-decoration: none;
+    min-width: 140px;
+    color: #00587A;
+    line-height: 50px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+
+/*Hover state for top level links*/
+
+nav .navbar li:hover a {
+    background: #55C34D;
+    color: #F0F1F5;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/*Style for dropdown links*/
+
+nav .navbar li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+/*Hover state for dropdown links*/
+
+nav .navbar li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+
+
+/* hide dropdown menues */
+
+nav .navbar li ul {
+    display: none;
+}
+
+nav .navbar li ul li {
+    display: block;
+    float: none;
+}
+
+
+/*Prevent text wrapping*/
+
+nav .navbar li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+
+/*Display the dropdown on hover*/
+
+nav .navbar li a:hover+ .hiddenNav,
+.hiddenNav:hover {
+    display: block;
+}
+.hiddenNav{
+    position: absolute;
+}
+@media screen and (max-width: 1115px) {
+    nav .header {
+        width: 100%;
+        text-align: center;
+        height: 70px;
+    }
+    nav .navbar {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    nav .navbar li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /*Make dropdown links appear inline*/
+    nav .header {
+        width: 70px;
+        height: auto;
+        margin-left: -15px;
+    }
+    nav ul {
+        position: static;
+		display: none;
+    }
+    nav .navbar li ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    nav li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    nav ul li,
+    nav li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    nav .show-menu {
+        display: block;
+    }
+}
+
+/*register*/
+
+
+.button1 {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #000;
+    background-color:white;
+    border-color: #46b8da;
+    font-size: 20px;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    
+}
+
+.reg{
+    padding: 1px;
+    color: black;
+    clear: left;
+    font-family:serif;
+    font-size: 60px;
+    text-shadow: 3px 3px 3px darkblue;
+    text-align: center;
+}
+.table{
+    align-self: center;
+    text-align: left;
+}
+
+.register-wrapper {
+    margin: 0 auto;
+    max-width: 360px;
+    background-color:cadetblue;
+    padding: 30px 25px;
+}
+
+.h2{
+    text-align: center;
+}
+
+.frm-input{
+    text-align: center;
+}
+
+#btn{
+    text-align: center;
+}
