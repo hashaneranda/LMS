@@ -1,68 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/png" />
-    <link rel="stylesheet" href="./css/animate.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
-    <title>LMS |NSBM</title>
-</head>
-
-<body>
-    <div class="topNav">
-        <div class="container">
-            <ul class="topLogin">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <nav>
-        <div class="container">
-            <div class="header">
-                <img src="./imgs/nsbm-green-uni-logo.png" alt="nsbm logo">
-            </div>
-
-            <label for="show-menu" class="show-menu">Show Menu</label>
-            <input type="checkbox" id="show-menu" role="button">
-
-
-            <ul class="navbar" id="menu">
-                <li class="current"><a href="#">Home</a></li>
-                <li><a href="#courses">Courses</a>
-                    <ul class="hiddenNav">
-                        <li><a href="SOC.html">School of Computing</a></li>
-                        <li><a href="SOB.html">School of Business</a></li>
-                        <li><a href="SOE.html">School of Engineering</a></li>
-                    </ul>
-                </li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#about">About NSBM</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<?php   include "../php/db.php";    ?>
+<?php   include "./includes/header.php";    ?>
+<?php   include "./includes/nav_home.php";    ?>
     <div class="main">
         <section id="landing">
             <div class="container">
                 <div class="loginBox wow bounceInRight" data-wow-delay="2s">
                     <img src="./imgs/user2.png" id="login-img" alt="user">
-                    <form>
+                    <form action="../php/login.php" method="post" >
                         <h3>Email</h3>
                         <div class="form-input">
-                            <input type="email" name="email" placeholder="Enter email">
+                            <input type="text" name="username" placeholder="Enter username ">
                         </div>
                         <h3>Password</h3>
                         <div class="form-input">
                             <input type="password" name="password" placeholder="Enter password ">
                         </div>
-                        <button type="submit" name="submit">Login</button>
+                        <span id="logErr">
+                            <?php if(isset($_GET['loginErr'])){
+                            foreach($_GET as $loc=>$item)
+                                $_GET[$loc] = base64_decode(urldecode($item));
+                            echo   $_GET[$loc]; }?>
+                        </span><br>
+                        <button type="submit" name="login">Login</button>
                     </form>
                     <a href="forget.html"> Forget Password ? </a><br><br>
                     <a href="forget.html"> Don't have a account!<br> REGISTER NOW </a>
@@ -119,21 +78,21 @@
                     <img src="./imgs/pexels-photo-251225.jpg" alt="computing">
                     <div class="text-box">
                         <h2>School of Computing</h2>
-                        <p><a href="SOC.html"><button>View courses</button></a></p>
+                        <p><a href="SOC.php"><button>View courses</button></a></p>
                     </div>
                 </div>
                 <div class="box col-sm-4 wow flipInY" data-wow-delay="1.3s">
                     <img src="./imgs/pexels-photo-buisniness.jpg" alt="manegment">
                     <div class="text-box">
                         <h2>School of Business</h2>
-                        <p><a href="SOB.html"><button>View courses</button></a></p>
+                        <p><a href="SOB.php"><button>View courses</button></a></p>
                     </div>
                 </div>
                 <div class="box col-sm-4 wow flipInY" data-wow-delay="1.6s">
                     <img src="./imgs/pexels-photo-256381.jpg" alt="engineering">
                     <div class="text-box">
                         <h2>School of Engineering</h2>
-                        <p><a href="SOB.html"><button>Coming Soon</button></a></p>
+                        <p><a href="#"><button>Coming Soon</button></a></p>
                     </div>
                 </div>
             </div>
@@ -160,7 +119,7 @@
                 <div class="container wow zoomIn" data-wow-delay="0.2s">
                     <h1>Events</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    <button>View Events</button>
+                    <a href="event.php"><button>View Events</button></a>
                 </div>
             </div>
 
@@ -176,9 +135,7 @@
                 <div class="box wow slideInUp" data-wow-delay="0.5s">
                     <p>NSBM Green University Town is the first ever green university in South Asia and sets an example for the whole South Asia by paving the way for environmental sustainability. The university is open for both national and international student community and it has turned a new chapter in Sri Lankan higher education. NSBM Green University Town is established under the Ministry of Skills Development and Vocational Training and it is renowned for its world-class academic offerings. This state-of-the-art university offers nationally and internationally recognized, UGC approved degree programmes and foreign degree programmes in three faculties: Management, Computing and Engineering. The university is spread over an area of 26 acres and the massive university complex was built with the intention of providing an opportunity for both national and international students to have a fully-fledged education in Sri Lanka. Currently around 9000 students are studying at the university and the highly qualified local and foreign lecturers who teach at the university are committed to prepare these undergraduates to face any challenge the world has to offer. The university’s commitment to excellence in education extends beyond course delivery since the university has created mutually beneficial relationships with the industry to provide students with opportunities to get exposure to the real- world work places. Inspired by the vision of making Sri Lanka the best educational hub in Asia, NSBM Green University Town is dedicated to gift the future leaders to the world with its fully fledged university..
                     </p>
-
                 </div>
-
             </div>
         </section>
         <section id="contact">
@@ -187,44 +144,63 @@
                 <p>We are looking forward to hearing from you soon...</p>
                 <p>inquiries@nsbm.lk</p>
                 <p>011 544 5000</p>
-
                 <div class="container">
-                    <form action="">
+                   <?php
+                    $nameErr=$emailErr=$msgErr="";
+                    $name=$email=$msg="";
+                    
+                    if(isset($_POST['submit'])){
+                        
+                        $tele=$_POST['tele'];
+                        
+                        
+                        if($_POST['name'] =="" || empty($_POST['name'])){
+                            $nameErr="* your name is required";
+                        }else{
+                            $name=$_POST['name'];
+                        }
+                        if($_POST['email'] =="" || empty($_POST['email'])){
+                            $emailErr="* your email is required";
+                        }else{
+                            $email=$_POST['email'];
+                        }
+                        if($_POST['msg'] =="" || empty($_POST['msg'])){
+                            $msgErr="* message is required";
+                        }else{
+                            $msg=$_POST['msg'];
+                        }
+                        if($name!=="" && $email !=="" && $msg!==""){
+                            $query="insert into inquiries(inq_name,inq_email,inq_msg) values ('{$name}','{$email}','{$msg}') ";
+
+                            $inqiry_query=mysqli_query($connection,$query);
+
+                            if(!$inqiry_query){
+                                die('QUERY FAILED'.mysqli_error($connection));
+                            }
+                        }
+                    } 
+                    
+                    ?>             
+                    <form action="" method="post" id="inqForm">
                         <div class="row">
                             <input type="text" placeholder="Name*" name="name" class="col-sm-4">
+                            <span class="err"><?php echo $nameErr;?></span>
                             <input type="email" placeholder="Email*" name="email" class="col-sm-4">
+                            <span class="err"><?php echo $emailErr;?></span>
                             <input type="text" placeholder="Phone Number" name="tele" class="col-sm-4">
                         </div>
                         <div class="row">
                             <textarea name="msg" cols="30" rows="10" placeholder="Write your message here.."></textarea>
+                            <span class="err"><?php echo $msgErr;?></span>
                         </div>
                         <div class="row">
-                            <button type="submit">SEND</button>
+                            <input type="submit" value="Submit" name="submit" >
                         </div>
-
                     </form>
                 </div>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7922.299566842686!2d79.883155!3d6.87265!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xddb466719c0595db!2sNSBM+Green+University!5e0!3m2!1sen!2sus!4v1497287775182" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-
-
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.579298859444!2d80.0398420847128!3d6.820910926595148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x546c34cd99f6f488!2sNSBM+Green+University!5e0!3m2!1sen!2sus!4v1498394248257" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
-        <footer>
-            <p>NSBM LMS , Copyright &copy; 2017</p>
-        </footer>
-
-
-    </div>
-
-    <script src="js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-
-    </script>
-    <script src="./js/main.js"></script>
-
-
-</body>
-
-</html>
+        
+        <?php   include "./includes/footer.php";    ?>
+       
