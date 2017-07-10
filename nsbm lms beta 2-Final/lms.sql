@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2017 at 07:21 PM
+-- Generation Time: Jul 10, 2017 at 08:03 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -172,13 +172,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `user_fullname`, `user_email`, `user_image`, `role`, `randSalt`, `Index_no`) VALUES
-(2, 'student1', 'student1', '', 'email', './uploads/56-apple-256.png', 'student', '', NULL),
-(3, 'lecturer1', 'lec1', 'lecturer3', 'lecturer1', '', 'lecturer', '', NULL),
-(4, 'lectuer2', 'lec2', 'lecturer 2', 'mail2', '', 'lecturer', '', NULL),
 (6, 'hello', '1234', 'hello', 'shehansuneth@gmail.com', '', 'student', '', '1234'),
-(9, 'hr', '', '', '', '', '', '$2y$10$iusesomecrazystrings22', NULL),
 (11, 'root', '$1$JL..e5/.$AXic3.8.7blksKRg9BqKm.', '', '', '', 'admin', '$2y$10$iusesomecrazystrings22', NULL),
-(12, 'lecturer4', '$1$Mf1.ls..$kPdYP0zUpEe.chfwWagc31', 'lecturer 4', 'lec4@gmail.com', '', 'lecturer', '$2y$10$iusesomecrazystrings22', NULL);
+(12, 'lecturer4', '$1$Mf1.ls..$kPdYP0zUpEe.chfwWagc31', 'lecturer 4', 'lec4@gmail.com', '', 'lecturer', '$2y$10$iusesomecrazystrings22', NULL),
+(13, 'student5', '$1$HA/.EZ/.$B5Tnjzo/vExuLCmvt2BBF.', 'student5', 'shehansuneth@gmail.com', '', 'student', '$2y$10$iusesomecrazystrings22', '1234'),
+(14, 'lecturer1', '$1$gS..pl3.$AXc6i1kw95K0xzutFJm1z.', 'lecturer 1', 'lec1@gmail.com', '', 'lecturer', '$2y$10$iusesomecrazystrings22', NULL),
+(15, 'student1', '$1$hl3.W02.$C6fysWL5.PDaKDyM084jE0', 'student1', 'student1@gmail.com', '', 'student', '$2y$10$iusesomecrazystrings22', '1234');
 
 --
 -- Indexes for dumped tables
@@ -257,7 +256,7 @@ ALTER TABLE `subscribers`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- Constraints for dumped tables
 --
