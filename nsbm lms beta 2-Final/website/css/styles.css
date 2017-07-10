@@ -1733,3 +1733,76 @@ footer .copyrightFooter {
     font-size: 40px;
 }
 }
+
+/*--------------event content ----------*/
+.eventcontent{
+    padding-top: 200px;
+}
+.eventcontent .heading h1{
+    font-family: 'Fredoka One', cursive;
+    font-size: 80px;
+    text-align: center;
+    color: #032E46;
+}
+.eventcontent .content{
+    padding: 20px;
+    box-shadow: 0 0 6px #000;
+}
+.eventcontent .content img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+.eventcontent .content p{
+    font-size: 40px;
+}
+.eventcontent .content .desc{
+    font-size: 20px;
+}
+.eventcontent .content input[type="submit"]{
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #23B684;
+    font-size: 18px;
+    cursor: pointer;
+}
+.eventcontent .content input[type="submit"]:hover{
+    opacity: 0.8;
+}
+#res{
+    text-align: center;
+    color: #E91818;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+@media screen and (max-width: 768px){
+    .eventcontent{
+        padding-top: 150px;
+    }
+    .eventcontent .heading h1{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .eventcontent .heading h1{
+        font-size: 40px;
+    }
+    .eventcontent .content p{
+    font-size: 30px;
+}
+    @media screen and (max-width: 360px){
+
+    .eventcontent .content p{
+    font-size: 20px;
+}
+    .eventcontent .content .desc{
+        font-size: 16px;
+}
+    .eventcontent .content input[type="submit"]{
+        padding: 10px;
+        font-size: 16px;
+        }
+}

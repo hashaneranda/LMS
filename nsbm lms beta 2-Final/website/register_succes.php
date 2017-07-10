@@ -30,17 +30,17 @@
 
 
             <ul class="navbar" id="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Courses</a>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php#courses">Courses</a>
                     <ul class="hiddenNav">
                         <li><a href="SOC.php">School of Computing</a></li>
                         <li><a href="SOB.php">School of Business</a></li>
                         <li><a href="SOE.html">School of Engineering</a></li>
                     </ul>
                 </li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#about">About NSBM</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.php#events">Events</a></li>
+                <li><a href="index.php#about">About NSBM</a></li>
+                <li><a href="index.php#contact">Contact</a></li>
             </ul>
         </div>
     </nav>

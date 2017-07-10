@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2017 at 08:45 PM
+-- Generation Time: Jul 10, 2017 at 07:21 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -80,7 +80,25 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`events_id`, `event_name`, `event_image`, `event_content`, `venue`, `date`, `time`) VALUES
-(1, 'Google IO 2017', './uploads/events/Google IO 2017artsfon.com-72740.jpg', '', 'galle', '2017-07-07', '12:00');
+(1, 'Google IO 2017', './uploads/events/123.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget elit aliquam, posuere ex quis, malesuada mauris. Ut posuere in diam eu feugiat. Vestibulum at ultrices lorem. Sed in accumsan urna. Nulla tincidunt scelerisque molestie. Proin orci ligula, bibendum ac urna vulputate, dignissim accumsan elit. Proin pulvinar odio velit. Etiam lorem sapien, facilisis quis lobortis quis, blandit sit amet enim. Aenean aliquam eget turpis ac euismod. Maecenas eu sodales leo. ', 'galle', '2017-07-07', '12:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `eventuser`
+--
+
+CREATE TABLE `eventuser` (
+  `user_id` int(5) NOT NULL,
+  `events_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `eventuser`
+--
+
+INSERT INTO `eventuser` (`user_id`, `events_id`) VALUES
+(6, 1);
 
 -- --------------------------------------------------------
 
@@ -145,7 +163,7 @@ CREATE TABLE `users` (
   `user_email` varchar(255) NOT NULL,
   `user_image` text NOT NULL,
   `role` varchar(255) NOT NULL,
-  `randSalt` varchar(255) NOT NULL,
+  `randSalt` varchar(255) NOT NULL DEFAULT '$2y$10$iusesomecrazystrings22',
   `Index_no` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -154,10 +172,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `user_fullname`, `user_email`, `user_image`, `role`, `randSalt`, `Index_no`) VALUES
-(1, 'root', 'helloroot', 'admin_team', '', '', 'admin', '', NULL),
 (2, 'student1', 'student1', '', 'email', './uploads/56-apple-256.png', 'student', '', NULL),
 (3, 'lecturer1', 'lec1', 'lecturer3', 'lecturer1', '', 'lecturer', '', NULL),
-(4, 'lectuer2', 'lec2', 'lecturer 2', 'mail2', '', 'lecturer', '', NULL);
+(4, 'lectuer2', 'lec2', 'lecturer 2', 'mail2', '', 'lecturer', '', NULL),
+(6, 'hello', '1234', 'hello', 'shehansuneth@gmail.com', '', 'student', '', '1234'),
+(9, 'hr', '', '', '', '', '', '$2y$10$iusesomecrazystrings22', NULL),
+(11, 'root', '$1$JL..e5/.$AXic3.8.7blksKRg9BqKm.', '', '', '', 'admin', '$2y$10$iusesomecrazystrings22', NULL),
+(12, 'lecturer4', '$1$Mf1.ls..$kPdYP0zUpEe.chfwWagc31', 'lecturer 4', 'lec4@gmail.com', '', 'lecturer', '$2y$10$iusesomecrazystrings22', NULL);
 
 --
 -- Indexes for dumped tables
@@ -181,6 +202,13 @@ ALTER TABLE `department`
 --
 ALTER TABLE `events`
   ADD PRIMARY KEY (`events_id`);
+
+--
+-- Indexes for table `eventuser`
+--
+ALTER TABLE `eventuser`
+  ADD PRIMARY KEY (`user_id`,`events_id`),
+  ADD KEY `fkuserEventevent` (`events_id`);
 
 --
 -- Indexes for table `inquiries`
@@ -214,7 +242,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `events_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `events_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `inquiries`
 --
@@ -229,7 +257,7 @@ ALTER TABLE `subscribers`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- Constraints for dumped tables
 --
@@ -239,6 +267,13 @@ ALTER TABLE `users`
 --
 ALTER TABLE `courses`
   ADD CONSTRAINT `fkcourseDept` FOREIGN KEY (`dept_ID`) REFERENCES `department` (`dept_ID`);
+
+--
+-- Constraints for table `eventuser`
+--
+ALTER TABLE `eventuser`
+  ADD CONSTRAINT `fkuserEventevent` FOREIGN KEY (`events_id`) REFERENCES `events` (`events_id`),
+  ADD CONSTRAINT `fkuserEventuser` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 
 --
 -- Constraints for table `student-enrol`

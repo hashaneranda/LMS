@@ -23,7 +23,7 @@
        ?>
             <div class="eventItem row">
                 <!-- bdy div-->
-                <div class="box">
+                <a href="event_content.php?event=<?php echo $e_id;  ?>"><div class="box">
                     <img src="<?php echo $e_image;  ?>" alt="event">
                     <div class="eventCaption">
                         <h2><?php echo $e_name;  ?></h2>
@@ -32,7 +32,7 @@
                             <p><?php echo $e_venue;  ?></p>
                         </div>
                     </div>
-                </div>
+                </div></a>
 
             </div>
             <?php

@@ -45,7 +45,7 @@ if(isset($_SESSION['user_role'])){
                             <span class="err"><?php echo $passErr;?></span>
                         </div>
                         <div class="col-sm-3">
-                            <input type="text" name="l_fulname" placeholder="Enter lecturer full name">
+                            <input type="text" name="l_fullname" placeholder="Enter lecturer full name">
                             <span class="err"><?php echo $fnameErr;?></span>
                         </div>
                         <div class="col-sm-3">
@@ -75,7 +75,7 @@ if(isset($_SESSION['user_role'])){
                           
                         $l_fullname=$_POST['l_fullname'];
                         $l_mail=$_POST['l_mail'];
-                        echo $lect_id;
+                        
                         
                         $query="update users set username='{$l_username}',user_fullname='{$l_fullname}',user_email='{$l_mail}' where user_id='{$lect_id}'";
                         

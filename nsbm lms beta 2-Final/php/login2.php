@@ -29,6 +29,7 @@
                 $db_fullname=$row['user_fullname'];
                 $db_user_role=$row['role'];
             }
+            $password=crypt($password,$db_password);
             
             if($username === $db_username && $password === $db_password){
                 
@@ -36,6 +37,7 @@
                 $_SESSION['username']=$db_username;
                 $_SESSION['fullname']=$db_fullname;
                 $_SESSION['user_role']=$db_user_role;
+                $_SESSION['userid']=$db_id;
                 header ("Location: ../admin/dashboard.php");
                 
             }else{

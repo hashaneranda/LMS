@@ -4,7 +4,7 @@
             <div class="container">
                 
                 <ul class="topLogin">
-                    <li><a href="../user/profile.php"><?php echo $_SESSION['username']; ?></a></li>
+                    <li><a href="dashboard.php"><?php echo $_SESSION['username']; ?></a></li>
                     <li><a href="../php/logout.php">Log out</a></li>
                 </ul>
             </div>
@@ -26,7 +26,7 @@
                     <li><a href="">Events</a>
                     <ul class="hiddenNav">
                         <li><a href="./admin_addevents.php">Add Events</a></li>
-                        <li><a href="./admin_viewevents.php">Delete Events</a></li>
+                        <li><a href="./admin_viewevents.php">View Events</a></li>
                     </ul>
                     </li>
                     <li><a href="./admin_lecturers.php">Lecturers</a></li>
