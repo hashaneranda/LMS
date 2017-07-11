@@ -52,7 +52,7 @@ if(!isset($_SESSION['user_role'])){ header("Location: login.php");   }
         <p>Username:  <?php   echo $uname;    ?> </p>
         <p>email:  <?php   echo $mail;    ?></p>
         <p>Index number:   <?php   echo $index;    ?></p>
-        <a href="profile.php?edit=<?php echo $id;   ?>"><button>Edit Profile</button></a>
+        <form action="#" method="get"><button type="submit" name="edit">Edit Profile</button></form>
         
     
     </div>
@@ -61,7 +61,7 @@ if(!isset($_SESSION['user_role'])){ header("Location: login.php");   }
             ?>
       
     <div class="editprofile">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="#" method="post" enctype="multipart/form-data">
            <input type="text" name="fname" placeholder="Full name">
            <input type="text" name="mail" placeholder="Email">
            Select profile Image:

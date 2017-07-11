@@ -32,7 +32,7 @@
         <label id="yr<?php echo $i ?>" for="toggle<?php echo $i ?>"><?php echo $yr ?></label>
         <div id="expand<?php echo $i ?>">
             <section>
-                 <b><p>Courses</p></b>
+                 <p><b>Courses</b></p>
                   <?php 
             
                         $query1 ="select * from courses where dept_ID ='SOB' and yr ='$yr'";

@@ -1,7 +1,7 @@
  <footer>
           <div class="subscribeBar row">
               <h1 class="col-sm-6">Subscribe to our newsletter</h1>
-            <form action="" method="post" class="col-sm-6">
+            <form action="#" method="post" class="col-sm-6">
                 <input type="email" placeholder="Enter Email..." name="mail">
                 <button type="submit" name="sub" onclick="alert('Thank You for subscribing ! ')" class="button_1">Subscribe</button>
             </form>
@@ -45,7 +45,6 @@
         </footer>
 
 
-    </div>
 
     <script src="./js/wow.min.js"></script>
     <script>

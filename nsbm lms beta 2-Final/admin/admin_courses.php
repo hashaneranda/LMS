@@ -35,7 +35,7 @@ if(isset($_SESSION['user_role'])){
                     include "./includes/add_course.php";
                     ?>
                     <h2>Add course</h2>
-                    <form action="" method="post">
+                    <form action="#" method="post">
                         <div class="col-sm-3">
                             <input type="text" name="m_code" placeholder="Enter module code">
                             <span class="err"><?php echo $codeErr;?></span>

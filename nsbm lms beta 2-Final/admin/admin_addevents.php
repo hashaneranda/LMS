@@ -20,7 +20,7 @@ if(!isset($_SESSION['user_role'])){ header("Location: ../website/login.php");   
                     include "./includes/add_event.php";
                     ?>
                     <h2>Add Event</h2>
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="#" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <input type="text" name="e_name" placeholder="Enter Event name">
                             <span class="err"><?php echo $nameErr;?></span>
@@ -34,7 +34,7 @@ if(!isset($_SESSION['user_role'])){ header("Location: ../website/login.php");   
                             <span class="err"><?php echo $venueErr;?></span>
                         </div>
                         <div class="row">
-                            <input type="date" name="e_date" placeholder="Enter date(format: yyyy-mm-dd) "><br>
+                            <input type="text" name="e_date" placeholder="Enter date(format: yyyy-mm-dd) "><br>
                             <span class="err"><?php echo $dateErr;?></span>
                         </div>
                         <div class="row">

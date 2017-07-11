@@ -15,7 +15,7 @@
             ?>
             <div class="addEvent">
                     <h2>Add Event</h2>
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="#" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <input type="text" name="e_name" value="<?php   echo $ev_name;    ?>">
                             

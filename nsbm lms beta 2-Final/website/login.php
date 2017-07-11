@@ -8,7 +8,7 @@
                 <img src="./imgs/nsbm-green-uni-logo.png" alt="nsbm logo">
             </div>
 
-            <label for="show-menu" class="show-menu"><img src="menu.png" width="100%"></label>
+            <label for="show-menu" class="show-menu"><img src="menu.png" style="width:100%" alt="-"></label>
             <input type="checkbox" id="show-menu" role="button">
 
 
@@ -48,7 +48,7 @@
                         </span><br>
                         <button type="submit" name="login">Login</button>
                     </form>
-                    <a href="forget.html"> Forget Password ? </a><br><br>
+                    <a href="forgot_password.php"> Forget Password ? </a><br><br>
                     <a href="register.php"> Don't have a account!<br> REGISTER NOW </a>
                 </div>
             </div>

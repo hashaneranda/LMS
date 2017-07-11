@@ -29,7 +29,7 @@
         <p>Venue : <?php echo $e_venue;  ?></p>
         <p>Date : <?php echo $e_date;  ?></p>
         <p>Time : <?php echo $e_time;  ?></p>
-        <form action="" method="post">
+        <form action="#" method="post">
             <input type="submit" value="Join now" name="join">
         </form>
     </div>

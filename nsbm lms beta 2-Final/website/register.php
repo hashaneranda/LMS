@@ -9,7 +9,7 @@
                 <img src="./imgs/nsbm-green-uni-logo.png" alt="nsbm logo">
             </div>
 
-            <label for="show-menu" class="show-menu"><img src="menu.png" width="100%"></label>
+            <label for="show-menu" class="show-menu"><img src="menu.png" style="width:100%" alt="-"></label>
             <input type="checkbox" id="show-menu" role="button">
 
 
@@ -43,7 +43,7 @@
                 <input type="email" name="mail" placeholder="Email">
                 <span id="mErr"></span>
                 <input type="text" name="index" placeholder="Index Number">
-                <sapn id="inErr"></sapn>
+                <span id="inErr"></span>
                 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a></p>
                 <input type="submit" name="register" value="Register" onclick="DoRegisterValidation();">
             </form>

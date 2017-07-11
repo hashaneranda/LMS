@@ -23,7 +23,7 @@
                         </span><br>
                         <button type="submit" name="login">Login</button>
                     </form>
-                    <a href="forget.html"> Forget Password ? </a><br><br>
+                    <a href="forgot_password.php"> Forget Password ? </a><br><br>
                     <a href="forget.html"> Don't have a account!<br> REGISTER NOW </a>
                 </div>
             </div>
@@ -78,21 +78,21 @@
                     <img src="./imgs/pexels-photo-251225.jpg" alt="computing">
                     <div class="text-box">
                         <h2>School of Computing</h2>
-                        <p><a href="SOC.php"><button>View courses</button></a></p>
+                        <form action="SOC.php" method="get"><button>View courses</button></form>
                     </div>
                 </div>
                 <div class="box col-sm-4 wow flipInY" data-wow-delay="1.3s">
                     <img src="./imgs/pexels-photo-buisniness.jpg" alt="manegment">
                     <div class="text-box">
                         <h2>School of Business</h2>
-                        <p><a href="SOB.php"><button>View courses</button></a></p>
+                        <form action="SOB.php" method="get"><button>View courses</button></form>
                     </div>
                 </div>
                 <div class="box col-sm-4 wow flipInY" data-wow-delay="1.6s">
                     <img src="./imgs/pexels-photo-256381.jpg" alt="engineering">
                     <div class="text-box">
                         <h2>School of Engineering</h2>
-                        <p><a href="#"><button>Coming Soon</button></a></p>
+                        <form action="#" method="get"><button>Coming Soon</button></form>
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                 <div class="container wow zoomIn" data-wow-delay="0.2s">
                     <h1>Events</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    <a href="event.php"><button>View Events</button></a>
+                    <form action="event.php"><button>View Events</button></form>
                 </div>
             </div>
 
@@ -181,7 +181,7 @@
                     } 
                     
                     ?>             
-                    <form action="" method="post" id="inqForm">
+                    <form action="#" method="post" id="inqForm">
                         <div class="row">
                             <input type="text" placeholder="Name*" name="name" class="col-sm-4">
                             <span class="err"><?php echo $nameErr;?></span>
@@ -199,8 +199,10 @@
                     </form>
                 </div>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.579298859444!2d80.0398420847128!3d6.820910926595148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x546c34cd99f6f488!2sNSBM+Green+University!5e0!3m2!1sen!2sus!4v1498394248257" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.579298859444!2d80.0398420847128!3d6.820910926595148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x546c34cd99f6f488!2sNSBM+Green+University!5e0!3m2!1sen!2sus!4v1498394248257" width="800" height="600" style="border:0" allowfullscreen></iframe>
         </section>
+            </div>
+
         
         <?php   include "./includes/footer.php";    ?>
        

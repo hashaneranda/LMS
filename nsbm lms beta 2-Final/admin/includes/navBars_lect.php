@@ -15,7 +15,7 @@
                     <h1><a href="../website/index.php">LMS Admin</a></h1>
                 </div>
 
-                <label for="show-menu" class="show-menu"><img src="../website/menu.png" width="100%"></label>
+                <label for="show-menu" class="show-menu"><img src="../website/menu.png" style="width:100%" alt="-"></label>
                 <input type="checkbox" id="show-menu" role="button">
 
 

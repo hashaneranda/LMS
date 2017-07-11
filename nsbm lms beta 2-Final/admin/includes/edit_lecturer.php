@@ -15,7 +15,7 @@
                             
                             ?>
                             <h2 id="edit">Edit lecturer</h2>
-                          <form action="" method="post">
+                          <form action="#" method="post">
                         <div class="col-sm-3">
                            
                             <input type="text" name="l_username" value="<?php if(isset($lect_uname)){echo $lect_uname;} ?>">

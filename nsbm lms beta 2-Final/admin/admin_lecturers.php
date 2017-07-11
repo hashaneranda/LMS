@@ -35,7 +35,7 @@ if(isset($_SESSION['user_role'])){
                     include "./includes/add_lecturer.php";
                     ?>
                     <h2>Add lecturers</h2>
-                    <form action="" method="post">
+                    <form action="#" method="post">
                         <div class="col-sm-3">
                             <input type="text" name="l_username" placeholder="Enter lecturer username">
                             <span class="err"><?php echo $unameErr;?></span>

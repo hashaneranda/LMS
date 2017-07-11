@@ -595,7 +595,9 @@ nav .navbar li a:hover+.hiddenNav,
     font-family: 'Fredoka One', cursive;
     padding: 20px;
 }
-
+#courses .box .text-box form{
+    margin-bottom: 10px;
+}
 #courses .box .text-box button {
     border: none;
     outline: 0;
@@ -1793,6 +1795,7 @@ footer .copyrightFooter {
     .eventcontent .content p{
     font-size: 30px;
 }
+}
     @media screen and (max-width: 360px){
 
     .eventcontent .content p{
@@ -1805,4 +1808,84 @@ footer .copyrightFooter {
         padding: 10px;
         font-size: 16px;
         }
+}
+    
+    /*----------forgot password----*/
+    
+.forgotpass{
+    
+        margin-top: 200px;
+
+    }
+
+.forgotpass .hide{
+    display: none;
+}
+.forgotpass .sendMail{
+    box-shadow: 0 0 7px #032E46;
+    width: 60%;
+    padding: 30px;
+}
+.forgotpass h1{
+        font-family: 'Fredoka One', cursive;
+        font-size: 30px;
+    text-align: center;
+    color: #032E46;
+    }
+.forgotpass h2{
+    font-family: 'Fredoka One', cursive;
+    color: #23B684;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+.forgotpass form{
+    display: block;
+    width: 60%;
+    margin:auto;
+}
+.forgotpass form input{
+    display: block;
+    margin: auto;
+}
+.forgotpass form input[type="text"],.forgotpass form input[type="email"],.forgotpass form input[type="password"]{
+   border: 1px solid #27AE60;
+    border-radius: 2px;
+    padding: 5px;
+    margin-bottom: 10px !important; 
+    width: 80%;
+    margin: auto;
+}
+.forgotpass form input[type="text"]:focus,.forgotpass form input[type="email"]:focus{
+    box-shadow: 0 0 3px #032E46;
+}
+.forgotpass form input[type="submit"]{
+       padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border:none;
+    background-color: #00587A;
+    color: #fff;
+    cursor: pointer;
+}
+.forgotpass form input[type="submit"]:hover{
+    opacity: 0.8;
+}
+@media screen and (max-width: 480px){
+    .forgotpass h2{
+        font-size: 23px;
+    }
+    .forgotpass{
+        margin-top: 150px;
+    }
+    .forgotpass h1{
+        font-size: 20px;
+    }
+    .forgotpass form{
+        width: 80%;
+}
+    .forgotpass form input[type="submit"]{
+        font-size: 14px;
+        padding: 6px;
+    }
 }

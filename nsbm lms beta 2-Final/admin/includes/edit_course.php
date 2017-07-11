@@ -14,7 +14,7 @@
                             
                             ?>
                             <h2 id="edit">Edit course</h2>
-                           <form action="" method="post">
+                           <form action="#" method="post">
                         <div class="col-sm-3">
                             <input type="text" name="m_code" value="<?php if(isset($module_code)){echo $module_code;} ?>">
                             <span class="err"><?php echo $codeErr;?></span>

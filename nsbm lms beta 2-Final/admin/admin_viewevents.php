@@ -68,7 +68,7 @@ if(!isset($_SESSION['user_role'])){ header("Location: ../website/login.php");   
             
             echo "<tr>";
             echo "<td>{$e_name}</td>";
-            echo "<td><img width='100%' src='../website/{$e_image}' alt='image'></td>";
+            echo "<td><img style='width:100%' src='../website/{$e_image}' alt='image'></td>";
             echo "<td>{$e_content}</td>";
             echo "<td>{$e_date}</td>";
             echo "<td>{$e_time}</td>";
@@ -93,4 +93,7 @@ if(!isset($_SESSION['user_role'])){ header("Location: ../website/login.php");   
             } 
             ?>
         </div>
+                </div>
+                </div>
+</div>
         <?php   include "./includes/footer.php";    ?>
