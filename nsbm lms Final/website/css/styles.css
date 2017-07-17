@@ -1,0 +1,1891 @@
+@import url('https://fonts.googleapis.com/css?family=Bubbler+One|Fredoka+One');
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Bubbler One', sans-serif;
+}
+
+/*----global -----*/
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+.main {
+    z-index: 1;
+}
+
+.row {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    display: inline;
+}
+
+.col-sm-3 {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.col-sm-4 {
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+.col-sm-6 {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .col-sm-3,
+    .col-sm-6 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .col-sm-3,
+    .col-sm-6,
+    .col-sm-4 {
+        width: 100%;
+    }
+}
+
+
+/*-----TOP NAV BAR------*/
+
+.topNav {
+    background-color: #1C2021;
+    color: #ECF0F1;
+    height: 30px;
+    overflow: hidden;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    width: 100%;
+    z-index: 30;
+    margin-top: 0;
+}
+
+.topNav .topLogin {
+    float: right;
+}
+
+.topNav .topLogin li {
+    display: inline-block;
+    margin: 5px 20px 0 0;
+}
+
+.topNav .topLogin li a {
+    color: #FFFFF7;
+}
+
+.topNav .topLogin li a:hover {
+    color: #3D8EB9;
+    font-weight: bold;
+    border: 1px solid #3D8EB9;
+    border-radius: 4px;
+    padding: 0 4px 0 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .topNav .topLogin {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/*---------- NAV BAR ------------*/
+
+/*Style 'show menu' label button and hide it by default*/
+
+nav .show-menu {
+    width: 10%;
+    float: right;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+
+/*Hide checkbox*/
+
+nav input[type=checkbox] {
+    display: none;
+}
+
+
+/*Show menu when invisible checkbox is checked*/
+
+nav input[type=checkbox]:checked~#menu {
+    display: block;
+}
+
+nav {
+    background-color: #FFFFF7;
+    color: #00587A;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #19c589 4px solid;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    width: 100%;
+    top: 30px;
+    overflow: visible;
+    z-index: 30;
+}
+
+nav .header {
+    height: 100px;
+    float: left;
+    width: 15%;
+}
+
+nav .navbar {
+    float: right;
+    padding-top: 15px;
+}
+
+nav .navbar .current {
+    background: #27AE60;
+    color: #F0F1F5;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/*Create a horizontal list with spacing*/
+
+nav .navbar li {
+    text-align: right;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+nav .navbar li a {
+    display: block;
+    text-decoration: none;
+    min-width: 140px;
+    color: #00587A;
+    line-height: 50px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+
+/*Hover state for top level links*/
+
+nav .navbar li:hover a {
+    background: #55C34D;
+    color: #F0F1F5;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/*Style for dropdown links*/
+
+nav .navbar li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+/*Hover state for dropdown links*/
+
+nav .navbar li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+
+
+/* hide dropdown menues */
+
+nav .navbar li ul {
+    display: none;
+}
+
+nav .navbar li ul li {
+    display: block;
+    float: none;
+}
+
+
+/*Prevent text wrapping*/
+
+nav .navbar li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+
+/*Display the dropdown on hover*/
+
+nav .navbar li a:hover+.hiddenNav,
+.hiddenNav:hover {
+    display: block;
+}
+
+.hiddenNav {
+    position: absolute;
+}
+
+@media screen and (max-width: 1115px) {
+    nav .header {
+        width: 100%;
+        text-align: center;
+        height: 70px;
+    }
+    nav .navbar {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    nav .navbar li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /*Make dropdown links appear inline*/
+    nav .header {
+        width: 70px;
+        height: auto;
+        margin-left: -15px;
+    }
+    nav ul {
+        position: static;
+        display: none;
+    }
+    nav .navbar li ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    nav li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    nav ul li,
+    nav li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    nav .show-menu {
+        display: block;
+    }
+}
+@media screen and (max-width: 360px) {
+    
+    nav {
+        font-size: 14px;
+    }
+}
+
+
+/*---home----LANDING ------*/
+
+#landing {
+    margin: 0;
+    padding: 0;
+    background-image: url("../imgs/pexels-photo-12064.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 360px) {
+    #landing {
+        min-height: 640px;
+    }
+}
+
+
+/*-------------LOGIN BOX---------------*/
+
+#login-img {
+    margin-top: -60px;
+    margin-bottom: 30px;
+    height: 160px;
+    width: 160px;
+}
+
+.loginBox {
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgba(44, 130, 201, 1.0);
+    border-radius: 4px;
+    box-shadow: 0 0 6px #2c3e50;
+    margin-top: 300px;
+    margin-bottom: 100px;
+    overflow: visible;
+    float: right;
+}
+
+.loginBox input {
+    width: 70%;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #00587A;
+}
+
+.loginBox h3 {
+    margin: 0 0 15px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+    color: #112233;
+}
+
+.loginBox button {
+    width: 30%;
+    border: none;
+    background-color: #00587A;
+    color: #CDCBA6;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.loginBox button:hover {
+    opacity: 0.8;
+}
+
+.loginBox a {
+    text-decoration: none;
+    color: #E7E7DE;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+.loginBox a:hover {
+    color: #55C34D;
+}
+
+@media screen and (max-width: 768px) {
+    .loginBox {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .loginBox {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .loginBox {
+        width: 400px;
+        margin-top: 250px;
+    }
+    #landing {
+        background-image: url("../imgs/pexels-photo-12064-min_opt.jpg");
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .loginBox {
+        width: 280px;
+        margin-top: 200px;
+    }
+    #login-img {
+        width: 120px;
+        height: 120px;
+    }
+    .loginBox input {
+        font-size: 16px;
+    }
+    .loginBox button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .loginBox {
+        width: 250px;
+        margin-top: 200px;
+    }
+    #login-img {
+        width: 100px;
+        height: 100px;
+    }
+    .loginBox input {
+        font-size: 14px;
+    }
+    .loginBox button {
+        font-size: 14px;
+    }
+}
+
+
+/*------------SPONSERS---PARTNER UNIVERSITIES------------------*/
+
+#sponsers {
+    margin: 40px 0 40px 0;
+}
+
+#sponsers h1 {
+    text-align: center;
+    font-size: 55px;
+    font-family: 'Fredoka One', cursive;
+    color: #55C34D;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#sponsers p {
+    text-align: center;
+    font-size: 17px;
+    color: rgb(44, 130, 201);
+    margin-bottom: 60px;
+}
+
+#sponsers img {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+#sponsers img:hover {
+    opacity: 1.0;
+}
+
+@media screen and (max-width: 768px) {
+    #sponsers h1 {
+        font-size: 30px;
+    }
+    #sponsers p {
+        font-size: 14px;
+    }
+    #sponsers img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #sponsers h1 {
+        font-size: 23px;
+    }
+    #sponsers p {
+        font-size: 12px;
+    }
+    #sponsers img {
+        width: auto;
+    }
+    #sponsers .col-sm-3,
+    #sponsers .col-sm-6 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #sponsers .col-sm-3,
+    #sponsers .col-sm-6 {
+        width: 100%;
+    }
+}
+
+
+/*--------------COURSES-----------------*/
+
+#courses {
+    background-image: url("../imgs/sky-clouds-garden-school.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#courses h1 {
+    text-align: center;
+    font-size: 55px;
+    font-family: 'Fredoka One', cursive;
+    color: #1DABB8;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#courses p {
+    text-align: center;
+    font-size: 17px;
+    font-family: monospace;
+    color: #92F22A;
+    margin-bottom: 60px;
+}
+
+#courses .box {
+    margin: 20px;
+    background-color: #F0F1F5;
+    box-shadow: 1px 1px 1px #E7E7E7;
+    margin-bottom: 100px;
+}
+
+#courses .box .text-box {}
+
+#courses .box .text-box h2 {
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+    padding: 20px;
+}
+#courses .box .text-box form{
+    margin-bottom: 10px;
+}
+#courses .box .text-box button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: #F0F1F5;
+    background-color: #55C34D;
+    text-align: center;
+    cursor: pointer;
+    width: 90%;
+    font-size: 18px;
+    margin: 0 10px 0 10px;
+}
+
+#courses .box .text-box button:hover {
+    opacity: 0.8;
+}
+
+#courses .box img {
+    width: 100%;
+    height: 300px;
+}
+
+@media screen and (max-width: 980px) {
+    #courses .box {
+        margin: 20px 10px 30px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #courses h1 {
+        font-size: 40px;
+    }
+    #courses p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #courses .box {
+        margin: 20px 0 20px 0;
+    }
+    #courses h1 {
+        font-size: 33px;
+    }
+    #courses p {
+        font-size: 14px;
+    }
+    #courses .box .text-box button {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #courses .box {
+        margin: 10px 0 15px 0;
+    }
+    #courses .box img {
+        height: 200px;
+    }
+    #courses .box .text-box button {
+        width: 80%;
+    }
+}
+
+
+/*-------------EVENTS-----------------*/
+
+#events {}
+
+#events .slideshow-container {
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-size: cover;
+    margin: auto;
+}
+
+#events .container {
+    text-align: center;
+    margin: auto;
+    left: 10%;
+    border-radius: 3px;
+    top: 20%;
+    position: absolute;
+    background-color: rgba(40, 40, 48, 0.6);
+}
+
+#events .container h1 {
+    font-size: 200px;
+    color: #FC575E;
+    font-weight: bold;
+    padding-bottom: 0;
+    margin: 0 0 0 0;
+}
+
+#events .container p {
+    color: #53DF83;
+    font-size: 50px;
+}
+
+#events .container button {
+    background-color: #FF6766;
+    color: #F0F1F5;
+    font-size: 30px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#events .container button:hover {
+    background-color: rgba(255, 103, 102, 0.6);
+}
+
+#events .myslides {
+    display: none;
+}
+
+
+/*next & prev buttons*/
+
+#events .prev,
+#events .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -20px;
+    padding: 20px;
+    color: #F0F1F5;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 600ms ease;
+    border-radius: 0 3px 3px 0;
+    z-index: 10;
+}
+
+
+/* Position the "next button" to the right */
+
+#events .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#events .prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+#events .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+
+#events .dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 600ms ease;
+}
+
+#events .active,
+#events .dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+#events .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.6s;
+    animation-name: fade;
+    animation-duration: 1.6s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .8
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #events .container h1 {
+        font-size: 80px;
+    }
+    #events .container p {
+        font-size: 30px;
+    }
+    #events .container button {
+        padding: 10px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #events .container h1 {
+        font-size: 40px;
+    }
+    #events .container p {
+        font-size: 18px;
+    }
+    #events .container button {
+        padding: 4px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #courses .box {
+        margin: 10px 0 15px 0;
+    }
+    #courses .box img {
+        height: 200px;
+    }
+    #courses .box .text-box button {
+        width: 80%;
+    }
+}
+
+
+/*------------about us------------------*/
+
+#about {
+    background-color: #55C34D;
+    padding: 30px 0 30px 0;
+}
+
+#about .container h1 {
+    font-size: 70px;
+    color: #3D8EB9;
+    text-align: center;
+}
+
+#about .container p {
+    font-size: 20px;
+    max-width: 80%;
+    margin: auto;
+    color: #282830;
+    padding-bottom: 30px;
+}
+
+#about .box {
+    background-color: #F0F1F5;
+    margin: 30px;
+    padding: 10px 0 10px 0;
+    border: 2px solid #3D8EB9;
+    cursor: pointer;
+}
+
+#about .box:hover {
+    box-shadow: 5px 3px 3px #3D8EB9;
+}
+
+@media screen and (max-width: 768px) {
+    #about .container h1 {
+        font-size: 50px;
+    }
+    #about .container p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about .container h1 {
+        font-size: 35px;
+    }
+    #about .container p {
+        font-size: 13px;
+    }
+}
+
+
+/*-----------CONTACT US----------------------*/
+
+#contact {
+    background-image: url("../imgs/pexels-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#contact .head {
+    display: block;
+    background-color: rgba(240, 241, 245, 0.8);
+    box-shadow: 5px 3px 2px #CF000F;
+    margin-bottom: 30px;
+}
+
+#contact .head h1 {
+    font-size: 60px;
+    color: #27AE60;
+    text-align: center;
+}
+
+#contact .head p {
+    text-align: center;
+    color: #3D8EB9;
+    font-size: 20px;
+}
+
+#contact .container form {
+    width: 100%;
+    display: block;
+}
+
+#contact .container form input[type="text"] {
+    margin: auto;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: solid 1px #27AE60;
+    text-align: left;
+    border-radius: 3px;
+}
+
+#contact .container form input[type="email"] {
+    margin: auto;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: solid 1px #27AE60;
+    text-align: left;
+    border-radius: 3px;
+}
+
+#contact .container form textarea {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    border: solid 1px #27AE60;
+    text-align: left;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+#contact .container form input[type="submit"] {
+    padding: 20px;
+    border: none;
+    text-align: center;
+    width: 100px;
+    height: auto;
+    background-color: #3D8EB9;
+    color: #F0F1F5;
+    font-size: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#contact .container form input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+#contact iframe {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+}
+#contact .err{
+    color: #CF000F;
+}
+@media screen and (max-width: 768px) {
+    #contact .head h1 {
+        font-size: 40px;
+    }
+    #contact .head p {
+        font-size: 16px;
+    }
+    #contact .container form input[type="text"] {
+        padding: 7px;
+    }
+    #contact .container form input[type="email"] {
+        padding: 7px;
+    }
+    #contact .container form input[type="submit"] {
+        padding: 8px;
+    }
+    #contact iframe {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contact .head h1 {
+        font-size: 35px;
+    }
+    #contact .head p {
+        font-size: 16px;
+    }
+    #contact .container form input[type="text"] {
+        padding: 5px;
+    }
+    #contact .container form input[type="email"] {
+        padding: 5px;
+    }
+    #contact .container form input[type="submit"] {
+        padding: 4px;
+        font-size: 16px;
+    }
+    #contact iframe {
+        height: 250px;
+    }
+}
+
+
+/*------------FOOTER----------------*/
+
+footer {
+    background-color: #00587A;
+    bottom: 0;
+    margin-top: -10px;
+}
+
+footer .subscribeBar {}
+
+footer .subscribeBar h1 {
+    background-color: #55C34D;
+    font-family: 'Fredoka One', cursive;
+    padding: 30px;
+    margin-top: -20px;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+}
+
+footer .subscribeBar form {
+    float: right;
+    margin-top: -65px;
+}
+
+footer .subscribeBar input[type="email"] {
+    padding: 15px;
+    margin-top: -50px;
+    width: 300px;
+    height: 25px;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+}
+
+footer .subscribeBar button[type="submit"] {
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 17px;
+    background-color: #55C34D;
+    cursor: pointer;
+}
+
+footer .subscribeBar button:hover {
+    opacity: 0.8;
+}
+
+footer .container h1 {
+    font-family: 'Fredoka One', cursive;
+    ;
+}
+
+footer .links {
+    display: block;
+    font-size: 20px;
+}
+
+footer .links a:hover {
+    color: #55C34D;
+}
+
+footer .copyrightFooter {
+    background-color: #55C34D;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    footer .subscribeBar .col-sm-6 {
+        width: 80%;
+    }
+    footer .subscribeBar input[type="email"] {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer .subscribeBar h1 {
+        font-size: 18px;
+    }
+    footer .subscribeBar input[type="email"] {
+        margin-top: 60px;
+        padding: 7px;
+    }
+    footer .subscribeBar button[type="submit"] {
+        padding: 5px;
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    footer .container h1 {
+        font-size: 18px;
+    }
+}
+
+
+/*------------------------------------------******* COURSES PAGES ********--------------------------------------------------------------------*/
+
+.faculty {
+    border: 2px solid #27AE60;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    margin: auto;
+    margin-bottom: 170px;
+}
+
+.faculty:hover {
+    box-shadow: 5px 5px 5px #27AE60;
+}
+
+.faculty h1 {
+    text-align: center;
+    font-size: 80px;
+}
+
+.faculty input {
+    display: none;
+    visibility: hidden;
+}
+
+.faculty label {
+    display: block;
+    padding: 0.5em;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    color: #666;
+}
+
+.faculty label:hover {
+    color: #000;
+}
+
+.faculty label::before {
+    font-family: Consolas, monaco, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    content: "+";
+    vertical-align: text-top;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
+}
+
+.faculty #expand0,
+#expand1,
+#expand2,
+#expand3,
+#expand4,
+#expand5,
+#expand6,
+#expand7,
+#expand8 {
+    display: none;
+    overflow: hidden;
+    transition: height 0.5s;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+}
+
+.faculty section {
+    padding: 0 20px;
+}
+
+.faculty section a:hover {
+    color: #00587A;
+    font-weight: bold;
+}
+
+
+/* --yr 0 -*/
+
+.faculty #toggle0:checked~#expand0 {
+    display: block;
+}
+
+.faculty #toggle0:checked~#yr0::before {
+    content: "-";
+}
+
+
+/* --yr 1 -*/
+
+.faculty #toggle1:checked~#expand1 {
+    display: block;
+}
+
+.faculty #toggle1:checked~#yr1::before {
+    content: "-";
+}
+
+
+/* --yr 2 -*/
+
+.faculty #toggle2:checked~#expand2 {
+    display: block;
+}
+
+.faculty #toggle2:checked~#yr2::before {
+    content: "-";
+}
+
+
+/* --yr 3 -*/
+
+.faculty #toggle3:checked~#expand3 {
+    display: block;
+}
+
+.faculty #toggle3:checked~#yr3::before {
+    content: "-";
+}
+
+
+/* --yr 4 -*/
+
+.faculty #toggle4:checked~#expand4 {
+    display: block;
+}
+
+.faculty #toggle4:checked~#yr4::before {
+    content: "-";
+}
+
+
+/* --yr 5 -*/
+
+.faculty #toggle5:checked~#expand5 {
+    display: block;
+}
+
+.faculty #toggle5:checked~#yr5::before {
+    content: "-";
+}
+
+
+/* --yr 6 -*/
+
+.faculty #toggle6:checked~#expand6 {
+    display: block;
+}
+
+.faculty #toggle6:checked~#yr6::before {
+    content: "-";
+}
+
+
+/* --yr 7 -*/
+
+.faculty #toggle7:checked~#expand7 {
+    display: block;
+}
+
+.faculty #toggle7:checked~#yr7::before {
+    content: "-";
+}
+
+
+/* --yr 8 -*/
+
+.faculty #toggle8:checked~#expand8 {
+    display: block;
+}
+
+.faculty #toggle8:checked~#yr8::before {
+    content: "-";
+}
+
+@media screen and (max-width: 480px) {
+    .faculty {
+        padding-top: 160px;
+        margin-bottom: 120px;
+    }
+    .faculty h1 {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .faculty {
+        padding-top: 150px;
+        margin-bottom: 120px;
+    }
+    .faculty h1 {
+        font-size: 45px;
+    }
+}
+
+
+/*-------------COURSES ----------*/
+
+
+.course_content table {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.course_content table td {
+    font-size: 18px;
+    padding: 3px;
+}
+.courseTitle h1{
+    font-family: 'Fredoka One', cursive;
+    padding-top: 250px;
+}
+.course_content table .delete{
+    color: #E3000E;
+}
+.course_content table .delete:hover{
+    text-decoration: underline;
+}
+.course_content table{
+    margin-bottom: 100px;
+}
+.course_content table a{
+    color: #00587A;
+}
+.course_content table a:hover{
+    text-decoration: underline;;
+}
+
+
+@media screen and (max-width: 768px) {
+    .courseTitle h1{
+        padding-top: 200px;
+}
+}
+@media screen and (max-width: 640px) {
+    .course_content table td {
+    font-size: 16px;
+}
+}
+@media screen and (max-width: 480px) {
+    .course_content table td {
+    font-size: 14px;
+}
+}
+@media screen and (max-width: 360px) {
+    .course_content table td {
+    font-size: 12px;
+}
+}
+/*-------------events view -------------*/
+
+#eventsview {
+    padding-top: 170px;
+    text-align: center;
+}
+
+#eventsview .heading {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#eventsview .heading h1 {
+    font-size: 60px;
+    font-family: 'Fredoka One', cursive;
+    color: #00587A;
+}
+
+#eventsview .heading p {
+    color: #3D8EB9;
+    margin-top: -20px;
+    font-size: 25px;
+}
+
+#eventsview .eventItem .box {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+#eventsview .eventItem .box:hover {
+    box-shadow: 0px 0px 12px #55C34D;
+}
+
+#eventsview .eventItem .box {
+    box-shadow: 0px 0px 12px #00587A;
+}
+
+#eventsview .eventItem .box img {
+    width: 100%;
+}
+
+#eventsview .eventItem .box h2 {
+    font-size: 25px;
+    color: #45362E;
+}
+
+#eventsview .eventItem .box .info p {
+    color: #45362E;
+    font-size: 18px;
+}
+
+#eventsview .eventItem .box .info {
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #eventsview .heading h1 {
+        font-size: 40px;
+    }
+    #eventsview .heading p {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    #eventsview .eventItem .box {
+        width: 90%;
+    }
+    #eventsview {
+        padding-top: 150px;
+    }
+}
+
+
+/*----------------login page -------------*/
+
+#loginNav {
+    background-color: #FFFFF7;
+    color: #00587A;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #19c589 4px solid;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    width: 100%;
+    top: 0 !important;
+    overflow: visible;
+    z-index: 30;
+}
+
+.login .loginBox {
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgba(44, 130, 201, 1.0);
+    border-radius: 4px;
+    box-shadow: 0 0 6px #2c3e50;
+    margin-top: 250px;
+    margin-bottom: 100px;
+    overflow: visible;
+    float: none;
+}
+
+@media screen and (max-width: 768px) {
+    .login .loginBox {
+        margin-top: 200px !important;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .login .loginBox {
+        width: 350px;
+    }
+    .login .loginBox input {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login .loginBox {
+        width: 300px;
+    }
+    .login .loginBox button {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .login .loginBox {
+        width: 260px;
+    }
+    .login .loginBox button {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .login .loginBox {
+        width: 220px;
+    }
+}
+
+
+/*---------------register page --------------------*/
+
+.register {
+    margin-top: 200px !important;
+    display: block;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #27AE60;
+    padding: 50px;
+    margin-bottom: 100px !important;
+    box-shadow: 0 0 6px #2c3e50;
+}
+
+.register span {
+    color: #E3000E;
+}
+
+.register h1 {
+    font-size: 60px;
+    font-family: 'Fredoka One', cursive;
+    color: #00587A;
+}
+
+.register input {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.register input:focus {
+    border-color: #00587A !important;
+    box-shadow: 0 0 5px #00587A;
+}
+
+.register input[type="text"],
+.register input[type="password"],
+.register input[type="email"] {
+    border: 1px solid #27AE60;
+    border-radius: 2px;
+    padding: 5px;
+    margin-bottom: 10px !important;
+}
+
+.register p a {
+    color: red;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+.register input[type="submit"] {
+    width: 100px;
+    ;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    background-color: #00587A;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.register input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 480px) {
+    .register {
+        margin-top: 150px !important;
+    }
+    .register h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .register input[type="submit"] {
+        padding: 7px;
+        font-size: 16px;
+    }
+}
+
+
+/*-------------registration succesfull------*/
+
+.regSucc {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.regSucc h1 {
+    font-size: 80px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.regSucc p {
+    color: #00587A;
+    font-size: 30px;
+}
+
+.regSucc p a:hover {
+    color: #27AE60;
+}
+
+@media screen and (max-width: 768px) {
+    .regSucc h1 {
+        font-size: 60px;
+        font-family: 'Fredoka One', cursive;
+    }
+    .regSucc p {
+        color: #00587A;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .regSucc h1 {
+        font-size: 40px;
+        font-family: 'Fredoka One', cursive;
+    }
+}
+@media screen and (max-width: 360px) {
+    .regSucc {
+    padding-top: 160px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.regSucc h1 {
+    font-size: 30px;
+    
+}
+
+.regSucc p {
+    color: #00587A;
+    font-size: 20px;
+}
+}
+/*------------proflie---*/
+.profile{
+    padding-top: 50px;
+    text-align: center;
+   margin-bottom: 50px;
+}
+.profile img{
+    width: 200px;
+    
+}
+.profile h1{
+    font-family: 'Fredoka One', cursive;
+    font-size: 80px;
+}
+.profile button{
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border:none;
+    background-color: #00587A;
+    color: #fff;
+    cursor: pointer;
+}
+.profile button:hover{
+    opacity: 0.8;
+}
+}
+.editprofile{
+    padding-bottom: 100px;
+    display: block;
+    text-align: center;
+    margin-bottom: 100px;
+    
+}
+.editprofile form{
+    width: 60%;
+    margin: auto;
+}
+.editprofile form input[type="text"],.editprofile form input[type="file"]{
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #27AE60;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+.editprofile form input[type="text"]:focus{
+    border: 1px solid #00587A;
+    box-shadow: 0 0 4px #00587A;
+}
+.editprofile form input[type="submit"]{
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border:none;
+    background-color: #00587A;
+    color: #fff;
+    cursor: pointer;
+}
+.editprofile form input[type="submit"]:hover{
+    opacity: 0.8;
+}
+.none{
+    padding: 50px;
+}
+@media screen and (max-width: 360px) {
+    .profile h1{
+    font-size: 40px;
+}
+}
+
+/*--------------event content ----------*/
+.eventcontent{
+    padding-top: 200px;
+}
+.eventcontent .heading h1{
+    font-family: 'Fredoka One', cursive;
+    font-size: 80px;
+    text-align: center;
+    color: #032E46;
+}
+.eventcontent .content{
+    padding: 20px;
+    box-shadow: 0 0 6px #000;
+}
+.eventcontent .content img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+.eventcontent .content p{
+    font-size: 40px;
+}
+.eventcontent .content .desc{
+    font-size: 20px;
+}
+.eventcontent .content input[type="submit"]{
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #23B684;
+    font-size: 18px;
+    cursor: pointer;
+}
+.eventcontent .content input[type="submit"]:hover{
+    opacity: 0.8;
+}
+#res{
+    text-align: center;
+    color: #E91818;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+@media screen and (max-width: 768px){
+    .eventcontent{
+        padding-top: 150px;
+    }
+    .eventcontent .heading h1{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .eventcontent .heading h1{
+        font-size: 40px;
+    }
+    .eventcontent .content p{
+    font-size: 30px;
+}
+}
+    @media screen and (max-width: 360px){
+
+    .eventcontent .content p{
+    font-size: 20px;
+}
+    .eventcontent .content .desc{
+        font-size: 16px;
+}
+    .eventcontent .content input[type="submit"]{
+        padding: 10px;
+        font-size: 16px;
+        }
+}
+    
+    /*----------forgot password----*/
+    
+.forgotpass{
+    
+        margin-top: 200px;
+
+    }
+
+.forgotpass .hide{
+    display: none;
+}
+.forgotpass .sendMail{
+    box-shadow: 0 0 7px #032E46;
+    width: 60%;
+    padding: 30px;
+}
+.forgotpass h1{
+        font-family: 'Fredoka One', cursive;
+        font-size: 30px;
+    text-align: center;
+    color: #032E46;
+    }
+.forgotpass h2{
+    font-family: 'Fredoka One', cursive;
+    color: #23B684;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+.forgotpass form{
+    display: block;
+    width: 60%;
+    margin:auto;
+}
+.forgotpass form input{
+    display: block;
+    margin: auto;
+}
+.forgotpass form input[type="text"],.forgotpass form input[type="email"],.forgotpass form input[type="password"]{
+   border: 1px solid #27AE60;
+    border-radius: 2px;
+    padding: 5px;
+    margin-bottom: 10px !important; 
+    width: 80%;
+    margin: auto;
+}
+.forgotpass form input[type="text"]:focus,.forgotpass form input[type="email"]:focus{
+    box-shadow: 0 0 3px #032E46;
+}
+.forgotpass form input[type="submit"]{
+       padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border:none;
+    background-color: #00587A;
+    color: #fff;
+    cursor: pointer;
+}
+.forgotpass form input[type="submit"]:hover{
+    opacity: 0.8;
+}
+@media screen and (max-width: 480px){
+    .forgotpass h2{
+        font-size: 23px;
+    }
+    .forgotpass{
+        margin-top: 150px;
+    }
+    .forgotpass h1{
+        font-size: 20px;
+    }
+    .forgotpass form{
+        width: 80%;
+}
+    .forgotpass form input[type="submit"]{
+        font-size: 14px;
+        padding: 6px;
+    }
+}
