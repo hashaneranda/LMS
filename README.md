@@ -33,7 +33,7 @@
 ```
   5. Just visit 
  ```
-  http://localhost/project_name
+  http://localhost/project_name/nsbm lms Final/lms/
 ```
   6. For live Demo visit 
  ```
