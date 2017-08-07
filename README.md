@@ -31,11 +31,16 @@
   ```bash
   cd /var/www/html/project_name && git clone https://github.com/hashaneranda/LMS.git
 ```
-  5. Just visit 
- ```
-  http://localhost/project_name/nsbm lms Final/lms/
+  5. Create database
+  
+  ```
+  go to phpmyadmin and create database named lms and import sql file in nsbm lms Final/lms.sql
 ```
-  6. For live Demo visit 
+  6. Just visit 
+ ```
+  http://localhost/project_name/nsbm lms Final/
+```
+  7. For live Demo visit 
  ```
   https://nsbmlms.byethost33.com
 ```
